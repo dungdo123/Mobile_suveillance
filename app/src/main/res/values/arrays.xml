@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="camera_resolutions">
+        <item>480p (SD)</item>
+        <item>720p (HD)</item>
+        <item>1080p (Full HD)</item>
+        <item>4K (Ultra HD)</item>
+    </string-array>
+
+    <string-array name="camera_resolution_values">
+        <item>480p</item>
+        <item>720p</item>
+        <item>1080p</item>
+        <item>4k</item>
+    </string-array>
+</resources> 
