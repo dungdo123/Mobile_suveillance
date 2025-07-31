@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.firedetection.app-mergeDebugResources-57:/layout/activity_main.xml",
+        "source": "com.firedetection.app-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.firedetection.app-mergeDebugResources-57:/layout/activity_camera.xml",
+        "source": "com.firedetection.app-main-60:/layout/activity_camera.xml"
+    },
+    {
+        "merged": "com.firedetection.app-mergeDebugResources-57:/layout/activity_settings.xml",
+        "source": "com.firedetection.app-main-60:/layout/activity_settings.xml"
+    }
+]

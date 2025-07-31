@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/detection_sensitivity">
+
+        <SwitchPreference
+            android:key="enable_sound_alerts"
+            android:title="Sound Alerts"
+            android:summary="Play sound when fire or smoke is detected"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="enable_vibration"
+            android:title="Vibration"
+            android:summary="Vibrate device when alerts are triggered"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/notification_settings">
+
+        <SwitchPreference
+            android:key="enable_notifications"
+            android:title="Enable Notifications"
+            android:summary="Show notifications for fire and smoke detection"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="enable_background_detection"
+            android:title="Background Detection"
+            android:summary="Continue monitoring when app is in background"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/camera_settings">
+
+        <SwitchPreference
+            android:key="save_detection_images"
+            android:title="Save Detection Images"
+            android:summary="Save images when fire or smoke is detected"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/about">
+
+        <Preference
+            android:key="app_version"
+            android:title="App Version"
+            android:summary="1.0.0" />
+
+        <Preference
+            android:key="model_version"
+            android:title="Model Version"
+            android:summary="YOLOv8 Fire Detection" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen> 

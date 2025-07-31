@@ -1,0 +1,10 @@
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\ml\FireDetectionModel.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\ui\CameraActivity.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\viewmodel\MainViewModel.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\ml\ModelIntegrationExample.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\ui\SettingsActivity.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\ui\DetectionOverlayView.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\utils\NotificationHelper.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\MainActivity.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\service\FireDetectionService.kt
+D:\PROJECTS\21.mobile\Mobile_suveillance\app\src\main\java\com\firedetection\app\viewmodel\CameraViewModel.kt
