@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
-        android:title="@string/detection_sensitivity"
-        app:iconSpaceReserved="false">
+        android:title="@string/detection_sensitivity">
 
-        <SeekBarPreference
-            android:key="detection_confidence"
-            android:title="Detection Confidence"
-            android:summary="Adjust the minimum confidence level for detections"
-            android:defaultValue="70"
-            app:min="50"
-            app:max="95"
-            app:showSeekBarValue="true" />
-
-        <SwitchPreferenceCompat
+        <SwitchPreference
             android:key="enable_sound_alerts"
             android:title="Sound Alerts"
             android:summary="Play sound when fire or smoke is detected"
             android:defaultValue="true" />
 
-        <SwitchPreferenceCompat
+        <SwitchPreference
             android:key="enable_vibration"
             android:title="Vibration"
             android:summary="Vibrate device when alerts are triggered"
@@ -30,16 +19,15 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/notification_settings"
-        app:iconSpaceReserved="false">
+        android:title="@string/notification_settings">
 
-        <SwitchPreferenceCompat
+        <SwitchPreference
             android:key="enable_notifications"
             android:title="Enable Notifications"
             android:summary="Show notifications for fire and smoke detection"
             android:defaultValue="true" />
 
-        <SwitchPreferenceCompat
+        <SwitchPreference
             android:key="enable_background_detection"
             android:title="Background Detection"
             android:summary="Continue monitoring when app is in background"
@@ -48,18 +36,9 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/camera_settings"
-        app:iconSpaceReserved="false">
+        android:title="@string/camera_settings">
 
-        <ListPreference
-            android:key="camera_resolution"
-            android:title="Camera Resolution"
-            android:summary="Select camera resolution for detection"
-            android:defaultValue="720p"
-            app:entries="@array/camera_resolutions"
-            app:entryValues="@array/camera_resolution_values" />
-
-        <SwitchPreferenceCompat
+        <SwitchPreference
             android:key="save_detection_images"
             android:title="Save Detection Images"
             android:summary="Save images when fire or smoke is detected"
@@ -68,8 +47,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/about"
-        app:iconSpaceReserved="false">
+        android:title="@string/about">
 
         <Preference
             android:key="app_version"

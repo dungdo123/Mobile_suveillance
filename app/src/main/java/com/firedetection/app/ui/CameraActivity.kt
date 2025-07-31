@@ -196,8 +196,7 @@ class CameraActivity : AppCompatActivity() {
             binding.overlayView.addText(
                 "${result.label} (${(result.confidence * 100).toInt()}%)",
                 result.boundingBox.left,
-                result.boundingBox.top - 10,
-                textPaint
+                result.boundingBox.top - 10
             )
         }
         

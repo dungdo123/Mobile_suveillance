@@ -9,6 +9,7 @@ import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeOp
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
+import org.tensorflow.lite.DataType
 import java.io.File
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -68,7 +69,7 @@ class FireDetectionModel {
         val inputImage = preprocessImage(bitmap)
         
         // Prepare output buffer
-        val outputBuffer = TensorBuffer.createFixedSize(intArrayOf(1, 25200, 85), interpreter!!.outputTensor(0).dataType())
+        val outputBuffer = TensorBuffer.createFixedSize(intArrayOf(1, 25200, 85), DataType.FLOAT32)
         
         // Run inference
         interpreter!!.run(inputImage.buffer, outputBuffer.buffer)
