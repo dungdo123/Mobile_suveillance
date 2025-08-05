@@ -15,6 +15,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.firedetection.app.R;
 import com.firedetection.app.ui.DetectionOverlayView;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import java.lang.NullPointerException;
@@ -33,6 +34,12 @@ public final class ActivityCameraBinding implements ViewBinding {
 
   @NonNull
   public final ImageButton btnSettings;
+
+  @NonNull
+  public final MaterialButton btnStopTest;
+
+  @NonNull
+  public final MaterialButton btnTestFire;
 
   @NonNull
   public final DetectionOverlayView overlayView;
@@ -57,7 +64,8 @@ public final class ActivityCameraBinding implements ViewBinding {
 
   private ActivityCameraBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout bottomControls, @NonNull ImageButton btnBack,
-      @NonNull ImageButton btnSettings, @NonNull DetectionOverlayView overlayView,
+      @NonNull ImageButton btnSettings, @NonNull MaterialButton btnStopTest,
+      @NonNull MaterialButton btnTestFire, @NonNull DetectionOverlayView overlayView,
       @NonNull MaterialCardView statusCard, @NonNull SwitchMaterial switchDetection,
       @NonNull LinearLayout topControls, @NonNull TextView tvDetectionCount,
       @NonNull TextView tvStatus, @NonNull PreviewView viewFinder) {
@@ -65,6 +73,8 @@ public final class ActivityCameraBinding implements ViewBinding {
     this.bottomControls = bottomControls;
     this.btnBack = btnBack;
     this.btnSettings = btnSettings;
+    this.btnStopTest = btnStopTest;
+    this.btnTestFire = btnTestFire;
     this.overlayView = overlayView;
     this.statusCard = statusCard;
     this.switchDetection = switchDetection;
@@ -119,6 +129,18 @@ public final class ActivityCameraBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnStopTest;
+      MaterialButton btnStopTest = ViewBindings.findChildViewById(rootView, id);
+      if (btnStopTest == null) {
+        break missingId;
+      }
+
+      id = R.id.btnTestFire;
+      MaterialButton btnTestFire = ViewBindings.findChildViewById(rootView, id);
+      if (btnTestFire == null) {
+        break missingId;
+      }
+
       id = R.id.overlayView;
       DetectionOverlayView overlayView = ViewBindings.findChildViewById(rootView, id);
       if (overlayView == null) {
@@ -162,8 +184,8 @@ public final class ActivityCameraBinding implements ViewBinding {
       }
 
       return new ActivityCameraBinding((ConstraintLayout) rootView, bottomControls, btnBack,
-          btnSettings, overlayView, statusCard, switchDetection, topControls, tvDetectionCount,
-          tvStatus, viewFinder);
+          btnSettings, btnStopTest, btnTestFire, overlayView, statusCard, switchDetection,
+          topControls, tvDetectionCount, tvStatus, viewFinder);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

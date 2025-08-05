@@ -15,7 +15,6 @@ color purple_200
 color purple_500
 color purple_700
 color secondary_text
-color smoke_gray
 color success_green
 color surface_color
 color teal_200
@@ -32,13 +31,14 @@ drawable ic_fire_detection
 drawable ic_history
 drawable ic_launcher_foreground
 drawable ic_settings
-drawable ic_smoke_alert
 id appBarLayout
 id bottomControls
 id btnBack
 id btnHistory
 id btnSettings
 id btnStartDetection
+id btnStopTest
+id btnTestFire
 id cardHeader
 id cardStatus
 id overlayView
@@ -75,8 +75,6 @@ string history
 string model_load_error
 string notification_settings
 string settings
-string smoke_alert_message
-string smoke_alert_title
 string start_detection
 string status_ready
 string tap_to_focus

@@ -16,9 +16,7 @@ class NotificationHelper(private val context: Context) {
 
     companion object {
         const val FIRE_CHANNEL_ID = "fire_detection"
-        const val SMOKE_CHANNEL_ID = "smoke_detection"
         const val FIRE_NOTIFICATION_ID = 1001
-        const val SMOKE_NOTIFICATION_ID = 1002
     }
 
     init {
@@ -37,17 +35,7 @@ class NotificationHelper(private val context: Context) {
                 enableLights(true)
             }
 
-            val smokeChannel = NotificationChannel(
-                SMOKE_CHANNEL_ID,
-                "Smoke Detection",
-                NotificationManager.IMPORTANCE_HIGH
-            ).apply {
-                description = "Smoke detection alerts"
-                enableVibration(true)
-                enableLights(true)
-            }
-
-            notificationManager.createNotificationChannels(listOf(fireChannel, smokeChannel))
+            notificationManager.createNotificationChannels(listOf(fireChannel))
         }
     }
 
@@ -76,33 +64,6 @@ class NotificationHelper(private val context: Context) {
             .build()
 
         notificationManager.notify(FIRE_NOTIFICATION_ID, notification)
-    }
-
-    fun showSmokeAlert() {
-        val intent = Intent(context, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        }
-        
-        val pendingIntent = PendingIntent.getActivity(
-            context,
-            0,
-            intent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        )
-
-        val notification = NotificationCompat.Builder(context, SMOKE_CHANNEL_ID)
-            .setContentTitle("💨 SMOKE DETECTED!")
-            .setContentText("Smoke has been detected in the monitored area. Please investigate!")
-            .setSmallIcon(R.drawable.ic_smoke_alert)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setCategory(NotificationCompat.CATEGORY_ALARM)
-            .setAutoCancel(true)
-            .setContentIntent(pendingIntent)
-            .setVibrate(longArrayOf(0, 1000, 500, 1000))
-            .setLights(0xFFA500, 2000, 2000)
-            .build()
-
-        notificationManager.notify(SMOKE_NOTIFICATION_ID, notification)
     }
 
     fun cancelAllNotifications() {

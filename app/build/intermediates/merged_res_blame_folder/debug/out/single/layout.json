@@ -1,14 +1,18 @@
 [
     {
-        "merged": "com.firedetection.app-mergeDebugResources-57:/layout/activity_main.xml",
-        "source": "com.firedetection.app-main-60:/layout/activity_main.xml"
-    },
-    {
         "merged": "com.firedetection.app-mergeDebugResources-57:/layout/activity_camera.xml",
         "source": "com.firedetection.app-main-60:/layout/activity_camera.xml"
     },
     {
-        "merged": "com.firedetection.app-mergeDebugResources-57:/layout/activity_settings.xml",
-        "source": "com.firedetection.app-main-60:/layout/activity_settings.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-mergeDebugResources-57:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-mergeDebugResources-57:\\layout\\activity_camera.xml",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-mergeDebugResources-57:\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\layout\\activity_settings.xml"
     }
 ]

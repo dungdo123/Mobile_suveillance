@@ -2192,7 +2192,6 @@ int color secondary_text_default_material_dark 0x7f06030f
 int color secondary_text_default_material_light 0x7f060310
 int color secondary_text_disabled_material_dark 0x7f060311
 int color secondary_text_disabled_material_light 0x7f060312
-int color smoke_gray 0x7f060313
 int color success_green 0x7f060314
 int color surface_color 0x7f060315
 int color switch_thumb_disabled_material_dark 0x7f060316
@@ -3154,7 +3153,6 @@ int drawable ic_mtrl_chip_checked_circle 0x7f0800b3
 int drawable ic_mtrl_chip_close_circle 0x7f0800b4
 int drawable ic_search_black_24 0x7f0800b5
 int drawable ic_settings 0x7f0800b6
-int drawable ic_smoke_alert 0x7f0800b7
 int drawable m3_avd_hide_password 0x7f0800b8
 int drawable m3_avd_show_password 0x7f0800b9
 int drawable m3_bottom_sheet_drag_handle 0x7f0800ba
@@ -3338,6 +3336,8 @@ int id btnBack 0x7f090067
 int id btnHistory 0x7f090068
 int id btnSettings 0x7f090069
 int id btnStartDetection 0x7f09006a
+int id btnStopTest 0x7f09021b
+int id btnTestFire 0x7f09021c
 int id buttonPanel 0x7f09006b
 int id cache_measures 0x7f09006c
 int id callMeasure 0x7f09006d
@@ -4196,8 +4196,6 @@ int string searchview_navigation_content_description 0x7f1000ca
 int string settings 0x7f1000cb
 int string side_sheet_accessibility_pane_title 0x7f1000cc
 int string side_sheet_behavior 0x7f1000cd
-int string smoke_alert_message 0x7f1000ce
-int string smoke_alert_title 0x7f1000cf
 int string start_detection 0x7f1000d0
 int string status_bar_notification_info_overflow 0x7f1000d1
 int string status_ready 0x7f1000d2

@@ -7,7 +7,7 @@
         <SwitchPreference
             android:key="enable_sound_alerts"
             android:title="Sound Alerts"
-            android:summary="Play sound when fire or smoke is detected"
+            android:summary="Play sound when fire is detected"
             android:defaultValue="true" />
 
         <SwitchPreference
@@ -24,7 +24,7 @@
         <SwitchPreference
             android:key="enable_notifications"
             android:title="Enable Notifications"
-            android:summary="Show notifications for fire and smoke detection"
+            android:summary="Show notifications for fire detection"
             android:defaultValue="true" />
 
         <SwitchPreference
@@ -41,7 +41,7 @@
         <SwitchPreference
             android:key="save_detection_images"
             android:title="Save Detection Images"
-            android:summary="Save images when fire or smoke is detected"
+            android:summary="Save images when fire is detected"
             android:defaultValue="false" />
 
     </PreferenceCategory>

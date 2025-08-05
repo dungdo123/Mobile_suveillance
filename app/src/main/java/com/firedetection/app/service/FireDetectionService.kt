@@ -49,7 +49,7 @@ class FireDetectionService : Service() {
     private fun createNotification(): Notification {
         return NotificationCompat.Builder(this, "fire_detection_service")
             .setContentTitle("Fire Detection Active")
-            .setContentText("Monitoring for fire and smoke...")
+                            .setContentText("Monitoring for fire...")
             .setSmallIcon(R.drawable.ic_fire_alert)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .build()

@@ -36,6 +36,8 @@ class CameraActivity : AppCompatActivity() {
     private var imageCapture: ImageCapture? = null
     private var camera: Camera? = null
     private var fireDetectionModel: FireDetectionModel? = null
+    private var isTestMode = false
+    private var testFireOverlay: android.view.View? = null
 
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -79,6 +81,15 @@ class CameraActivity : AppCompatActivity() {
                     stopDetection()
                 }
             }
+
+            // Test simulation buttons
+            btnTestFire.setOnClickListener {
+                startFireTest()
+            }
+
+            btnStopTest.setOnClickListener {
+                stopFireTest()
+            }
         }
     }
 
@@ -93,10 +104,8 @@ class CameraActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.isSmokeDetected.observe(this) { isSmoke ->
-            if (isSmoke) {
-                handleSmokeDetection()
-            }
+        viewModel.detectionCount.observe(this) { count ->
+            binding.tvDetectionCount.text = "Detections: $count"
         }
     }
 
@@ -163,7 +172,7 @@ class CameraActivity : AppCompatActivity() {
         val bitmap = imageProxy.toBitmap()
         if (bitmap != null) {
             try {
-                val results = fireDetectionModel?.detectFireAndSmoke(bitmap) ?: emptyList()
+                val results = fireDetectionModel?.detectFire(bitmap) ?: emptyList()
                 viewModel.updateDetectionResults(results)
             } catch (e: Exception) {
                 Log.e(TAG, "Error processing image", e)
@@ -177,11 +186,7 @@ class CameraActivity : AppCompatActivity() {
         
         results.forEach { result ->
             val paint = Paint().apply {
-                color = when (result.label) {
-                    "fire" -> Color.RED
-                    "smoke" -> Color.GRAY
-                    else -> Color.YELLOW
-                }
+                color = Color.RED // Fire detection only
                 style = Paint.Style.STROKE
                 strokeWidth = 4f
             }
@@ -210,13 +215,11 @@ class CameraActivity : AppCompatActivity() {
         startForegroundService(serviceIntent)
     }
 
-    private fun handleSmokeDetection() {
-        notificationHelper.showSmokeAlert()
-    }
+
 
     private fun startDetection() {
         try {
-            fireDetectionModel = FireDetectionModel()
+            fireDetectionModel = FireDetectionModel(this)
             binding.tvStatus.text = "Detection started"
         } catch (e: Exception) {
             Toast.makeText(this, "Failed to start detection: ${e.message}", Toast.LENGTH_LONG).show()
@@ -236,6 +239,146 @@ class CameraActivity : AppCompatActivity() {
         super.onDestroy()
         cameraExecutor.shutdown()
         fireDetectionModel?.close()
+    }
+
+    // Test simulation methods
+    private fun startFireTest() {
+        isTestMode = true
+        binding.tvStatus.text = "Test Mode: Fire simulation active"
+        
+        // Ensure the model is loaded before testing
+        if (fireDetectionModel == null) {
+            try {
+                fireDetectionModel = FireDetectionModel(this)
+                binding.tvStatus.text = "Test Mode: Model loaded, starting inference..."
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading model for test", e)
+                binding.tvStatus.text = "Test Mode: Failed to load model"
+                Toast.makeText(this, "Failed to load detection model", Toast.LENGTH_SHORT).show()
+                return
+            }
+        }
+        
+        // Create and add fire overlay using fire.jpg from assets
+        testFireOverlay = android.widget.ImageView(this).apply {
+            try {
+                val inputStream = assets.open("fire.jpg")
+                val bitmap = android.graphics.BitmapFactory.decodeStream(inputStream)
+                inputStream.close()
+                
+                // Scale the bitmap to cover more of the frame (e.g., 60% of screen width)
+                val screenWidth = resources.displayMetrics.widthPixels
+                val targetWidth = (screenWidth * 0.9).toInt()
+                val targetHeight = (targetWidth * 0.9).toInt() // Maintain aspect ratio
+                
+                val scaledBitmap = android.graphics.Bitmap.createScaledBitmap(
+                    bitmap, 
+                    targetWidth, 
+                    targetHeight, 
+                    true
+                )
+                
+                setImageBitmap(scaledBitmap)
+                layoutParams = android.view.ViewGroup.LayoutParams(
+                    targetWidth,
+                    targetHeight
+                )
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading fire image", e)
+                // Fallback to a simple colored view if image loading fails
+                setBackgroundColor(android.graphics.Color.RED)
+                val screenWidth = resources.displayMetrics.widthPixels
+                val targetWidth = (screenWidth * 0.6).toInt()
+                val targetHeight = (targetWidth * 0.75).toInt()
+                layoutParams = android.view.ViewGroup.LayoutParams(targetWidth, targetHeight)
+            }
+        }
+        
+        // Add overlay to the camera view
+        (binding.viewFinder.parent as android.view.ViewGroup).addView(testFireOverlay)
+        
+        // Position the fire overlay in the center of the screen
+        testFireOverlay?.post {
+            testFireOverlay?.let { overlay ->
+                val centerX = binding.viewFinder.width / 2 - overlay.width / 2
+                val centerY = binding.viewFinder.height / 2 - overlay.height / 2
+                overlay.x = centerX.toFloat()
+                overlay.y = centerY.toFloat()
+            }
+        }
+        
+        // Simulate fire detection after a short delay
+        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+            if (isTestMode) {
+                simulateFireDetection()
+            }
+        }, 2000)
+        
+        Toast.makeText(this, "Fire test simulation started", Toast.LENGTH_SHORT).show()
+    }
+    
+    private fun stopFireTest() {
+        isTestMode = false
+        binding.tvStatus.text = "Test Mode: Stopped"
+        
+        // Remove fire overlay
+        testFireOverlay?.let { overlay ->
+            (overlay.parent as? android.view.ViewGroup)?.removeView(overlay)
+            testFireOverlay = null
+        }
+        
+        // Clear detection results
+        binding.overlayView.clear()
+        binding.overlayView.invalidate()
+        
+        Toast.makeText(this, "Fire test simulation stopped", Toast.LENGTH_SHORT).show()
+    }
+    
+    private fun simulateFireDetection() {
+        if (!isTestMode) return
+        
+        // Load the fire.jpg image and run real model inference
+        try {
+            val inputStream = assets.open("fire.jpg")
+            val fireBitmap = android.graphics.BitmapFactory.decodeStream(inputStream)
+            inputStream.close()
+            
+            android.util.Log.d("CameraActivity", "Loaded fire.jpg: ${fireBitmap.width}x${fireBitmap.height}")
+            android.util.Log.d("CameraActivity", "Fire bitmap config: ${fireBitmap.config}")
+            
+            // Run real model inference on the fire image
+            val realResults = fireDetectionModel?.detectFire(fireBitmap) ?: emptyList()
+            
+            android.util.Log.d("CameraActivity", "Model inference completed, found ${realResults.size} detections")
+            
+            if (realResults.isNotEmpty()) {
+                // Model detected fire - use real results
+                viewModel.updateDetectionResults(realResults)
+                viewModel.setFireDetected(true)
+                notificationHelper.showFireAlert()
+                binding.tvStatus.text = "Test Mode: Real fire detection! (${(realResults.first().confidence * 100).toInt()}% confidence)"
+                
+                android.util.Log.d("CameraActivity", "Fire detected with confidence: ${realResults.first().confidence}")
+            } else {
+                // No fire detected by model
+                viewModel.updateDetectionResults(emptyList())
+                viewModel.setFireDetected(false)
+                binding.tvStatus.text = "Test Mode: No fire detected in test image"
+                
+                android.util.Log.d("CameraActivity", "No fire detected in the image")
+            }
+            
+        } catch (e: Exception) {
+            Log.e(TAG, "Error running model inference on test image", e)
+            binding.tvStatus.text = "Test Mode: Error running model inference"
+        }
+        
+        // Continue simulation every 3 seconds
+        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+            if (isTestMode) {
+                simulateFireDetection()
+            }
+        }, 3000)
     }
 
     companion object {

@@ -1,106 +1,110 @@
 [
     {
-        "merged": "com.firedetection.app-merged_res-58:/layout_activity_camera.xml.flat",
-        "source": "com.firedetection.app-main-60:/layout/activity_camera.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_ic_camera.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\ic_camera.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_ic_fire_detection.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/ic_fire_detection.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\ic_settings.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_ic_smoke_alert.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/ic_smoke_alert.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_ic_smoke_alert.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\ic_smoke_alert.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/layout_activity_settings.xml.flat",
-        "source": "com.firedetection.app-main-60:/layout/activity_settings.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_ic_history.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\ic_history.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_ic_history.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/ic_history.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/xml_data_extraction_rules.xml.flat",
-        "source": "com.firedetection.app-main-60:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_ic_fire_alert.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\ic_fire_alert.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/layout_activity_main.xml.flat",
-        "source": "com.firedetection.app-main-60:/layout/activity_main.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_gradient_bottom.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\gradient_bottom.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_ic_camera.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/ic_camera.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_ic_back.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/ic_back.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-xxxhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-xxxhdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_ic_fire_alert.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/ic_fire_alert.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_gradient_top.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\gradient_top.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/xml_preferences.xml.flat",
-        "source": "com.firedetection.app-main-60:/xml/preferences.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-mdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-xxxhdpi_ic_launcher.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-xxxhdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\layout\\activity_settings.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-xhdpi_ic_launcher_round.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-xhdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-xxhdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-hdpi_ic_launcher.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-hdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_test_fire_overlay.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\test_fire_overlay.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-xxhdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-mdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/xml_backup_rules.xml.flat",
-        "source": "com.firedetection.app-main-60:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-hdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-xxxhdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\ic_back.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-xhdpi_ic_launcher.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-xhdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-xhdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-mdpi_ic_launcher.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-mdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\drawable_ic_fire_detection.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\drawable\\ic_fire_detection.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_gradient_top.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/gradient_top.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\layout_activity_camera.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\layout\\activity_camera.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_gradient_bottom.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/gradient_bottom.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-xhdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/drawable_ic_settings.xml.flat",
-        "source": "com.firedetection.app-main-60:/drawable/ic_settings.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-hdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-mdpi_ic_launcher_round.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-mdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\xml_preferences.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\xml\\preferences.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-hdpi_ic_launcher_round.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-hdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-xxxhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-xxxhdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.firedetection.app-merged_res-58:/mipmap-xxhdpi_ic_launcher.xml.flat",
-        "source": "com.firedetection.app-main-60:/mipmap-xxhdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-merged_res-58:\\mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\dungd\\.gradle\\daemon\\8.2\\com.firedetection.app-main-60:\\mipmap-xxhdpi\\ic_launcher.xml"
     }
 ]

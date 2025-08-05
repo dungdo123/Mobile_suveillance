@@ -22,12 +22,12 @@ import java.nio.channels.FileChannel
 class ModelIntegrationExample(private val context: Context) {
     
     private var interpreter: Interpreter? = null
-    private val modelFile = "fire_smoke_detection.tflite"
+    private val modelFile = "fire_detection.tflite"
     
     // YOLOv8 specific parameters - adjust based on your model
-    private val inputSize = 640
-    private val numClasses = 2 // fire, smoke
-    private val labels = listOf("fire", "smoke")
+    private val inputSize = 416
+    private val numClasses = 1 // fire
+    private val labels = listOf("fire")
     
     init {
         loadModel()

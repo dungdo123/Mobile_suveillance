@@ -2193,7 +2193,6 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
-color smoke_gray
 color success_green
 color surface_color
 color switch_thumb_disabled_material_dark
@@ -3155,7 +3154,6 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable ic_settings
-drawable ic_smoke_alert
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3339,6 +3337,8 @@ id btnBack
 id btnHistory
 id btnSettings
 id btnStartDetection
+id btnStopTest
+id btnTestFire
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -4197,8 +4197,6 @@ string searchview_navigation_content_description
 string settings
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
-string smoke_alert_message
-string smoke_alert_title
 string start_detection
 string status_bar_notification_info_overflow
 string status_ready
